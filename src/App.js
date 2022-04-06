@@ -17,7 +17,7 @@ function App() {
     setMovie(data);
   }, [data]);
   const fetchMovies=(text)=>{
-    axios.get(`http://www.omdbapi.com/?s=${text}&apikey=e0d96d01`).then((response)=>{
+    axios.get(`https://www.omdbapi.com/?s=${text}&apikey=e0d96d01`).then((response)=>{
       let searchData = response.data.Search || [];
      setMovie(searchData)
      setInitialCheck("fromapi")
